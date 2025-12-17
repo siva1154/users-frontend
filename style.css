@@ -1,0 +1,243 @@
+/* ======================
+   ROOT VARIABLES
+====================== */
+:root {
+  --bg-main: radial-gradient(circle at top, #1e1b4b, #020617);
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --text-main: #e5e7eb;
+  --accent: #38bdf8;
+  --accent-purple: #a78bfa;
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+/* ======================
+   GLOBAL
+====================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 16px;
+  margin: 20px auto;
+  width: fit-content;
+
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 50px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  color: #020617;
+  box-shadow: 0 0 20px var(--accent);
+}
+
+/* ======================
+   HEADINGS
+====================== */
+h2 {
+  text-align: center;
+  margin: 40px 0 30px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ======================
+   FORM (ADD PRODUCT)
+====================== */
+form {
+  max-width: 420px;
+  margin: 0 auto 40px;
+  padding: 30px;
+
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 0 40px rgba(167, 139, 250, 0.25);
+}
+
+form input {
+  width: 100%;
+  padding: 14px;
+  margin: 14px 0;
+  border-radius: 14px;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 14px;
+}
+
+form input::placeholder {
+  color: #c7d2fe;
+}
+
+form input:focus {
+  outline: 2px solid var(--accent);
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+
+  background: linear-gradient(135deg, #4ade80, var(--accent));
+  color: #020617;
+  box-shadow: 0 0 25px rgba(74, 222, 128, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 45px rgba(74, 222, 128, 0.9);
+}
+
+/* ======================
+   PRODUCT LIST
+====================== */
+#list {
+  max-width: 850px;
+  margin: 50px auto;
+}
+
+#list > div {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  padding: 22px;
+  border-radius: 22px;
+  margin-bottom: 25px;
+  border: 1px solid var(--glass-border);
+
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.75);
+}
+
+/* ======================
+   BUTTONS
+====================== */
+button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:nth-of-type(1) {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #020617;
+}
+
+button:nth-of-type(2) {
+  background: linear-gradient(135deg, #fb7185, #ef4444);
+  color: #020617;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px white;
+}
+
+/* ======================
+   USERS PAGE (IMPORTANT)
+====================== */
+#users {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* USER CARD */
+#users > div {
+  background: var(--card-bg);
+  border-radius: 22px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+#users > div:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 45px 90px rgba(56, 189, 248, 0.5);
+}
+
+/* USER IMAGE */
+#users img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 15px;
+}
+
+/* USER NAME */
+#users p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+/* ======================
+   HR
+====================== */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-purple),
+    transparent
+  );
+  margin: 40px 0;
+}
