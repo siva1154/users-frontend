@@ -1,4 +1,4 @@
-const USER_API = "https://user-backend-s3bz.onrender.com/users";
+const USER_API = "https://user-backend-s3bz.onrender.com/products";
 
 // FETCH USERS
 async function getUsers() {
